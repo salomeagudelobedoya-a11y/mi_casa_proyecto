@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Mi Casa</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h1>🏠 Proyecto: Mi Casa</h1>
+
+<h2>🎥 Video de mi casa</h2>
+
+<video width="500" controls>
+<source src="{{ url_for('static', filename='video/casa.mp4') }}" type="video/mp4">
+Tu navegador no soporta el video.
+</video>
+
+<h2>📏 Medidas de cada lugar</h2>
+
+<table border="1">
+
+<tr>
+<th>Lugar</th>
+<th>Ancho</th>
+<th>Largo</th>
+<th>Altura</th>
+</tr>
+
+{% for lugar in casa %}
+
+<tr>
+<td>{{ lugar.lugar }}</td>
+<td>{{ lugar.ancho }}</td>
+<td>{{ lugar.largo }}</td>
+<td>{{ lugar.altura }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html><h2>📸 Fotos de mi casa</h2>
+
+<div class="galeria">
+
+<img src="{{ url_for('static', filename='imagenes/casa1.jpeg') }}" width="250">
+
+<img src="{{ url_for('static', filename='imagenes/casa2.jpeg') }}" width="250">
+
+<img src="{{ url_for('static', filename='imagenes/casa3.jpeg') }}" width="250">
+
+</div>
