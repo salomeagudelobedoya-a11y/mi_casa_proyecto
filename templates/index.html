@@ -42,16 +42,82 @@ Tu navegador no soporta el video.
 
 </table>
 
-</body>
-
-</html><h2>📸 Fotos de mi casa</h2>
+<h2>📸 Fotos de mi casa</h2>
 
 <div class="galeria">
 
 <img src="{{ url_for('static', filename='imagenes/casa1.jpeg') }}" width="250">
-
 <img src="{{ url_for('static', filename='imagenes/casa2.jpeg') }}" width="250">
-
 <img src="{{ url_for('static', filename='imagenes/casa3.jpeg') }}" width="250">
 
+</div> <!-- cierre de galeria -->
+
+<div class="seccion-abajo">
+
+<h2>🏡 Proyecto: La casa de mis sueños</h2>
+
+<h3>🎥 Video</h3>
+
+<video width="500" controls>
+<source src="{{ url_for('static', filename='video/casa2.mp4') }}" type="video/mp4">
+Tu navegador no soporta el video.
+</video>
+
+<h3>✨ Cosas que tiene la casa</h3>
+
+<table class="tabla-casa">
+
+<tr>
+<th>Espacio</th>
+<th>Cantidad</th>
+</tr>
+
+<tr>
+<td>🛏️ Habitaciones</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>🛁 Baños</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>🍽️ Cocina</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>🛋️ Sala</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>🚗 Garaje</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>🌿 Patio</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>🏊 Piscina</td>
+<td>1</td>
+</tr>
+
+</table>
+
+<h3>📸 Imágenes de la casa de mis sueños</h3>
+
+<div class="imagenes-final">
+
+<img src="{{ url_for('static', filename='imagenes/casa4.jpeg') }}" width="250">
+<img src="{{ url_for('static', filename='imagenes/casa5.jpeg') }}" width="250">
+<img src="{{ url_for('static', filename='imagenes/casa6.jpeg') }}" width="250">
 </div>
+
+</body>
+
+</html>
